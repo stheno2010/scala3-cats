@@ -1,5 +1,8 @@
 val scala3Version = "3.3.1"
 
+val catsEffectVersion = "3.5.2"
+val circeVersion = "0.14.5"
+
 autoCompilerPlugins := true
 
 lazy val root = project
@@ -11,7 +14,10 @@ lazy val root = project
     scalaVersion := scala3Version,
 
     libraryDependencies ++= Seq(
-      "org.typelevel" %% "cats-effect" % "3.5.2",
+      "org.typelevel" %% "cats-effect" % catsEffectVersion,
+      "io.circe" %% "circe-core" % circeVersion,
+      "io.circe" %% "circe-generic" % circeVersion,
+      "io.circe" %% "circe-parser" % circeVersion,
       "org.typelevel" %% "munit-cats-effect-3" % "1.0.6" % Test
     ),
   )
