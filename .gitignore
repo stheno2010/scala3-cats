@@ -17,6 +17,7 @@ local.sbt
 
 # Bloop
 .bsp
+null/
 
 # VS Code
 .vscode/
